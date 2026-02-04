@@ -4,28 +4,22 @@
   "description": "Express Backend",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/server.ts",
+    "start": "npx prisma dev --detach && ts-node src/server.ts",
     "build": "tsc",
     "serve": "node dist/index.js"
   },
+  "dependencies": {
+    "@repo/database": "*",
+    "express": "^5.2.1"
+  },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^25.2.0",
-    "@types/pg": "^8.16.0",
-    "express": "^5.2.1",
-    "prisma": "^7.3.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@prisma/adapter-pg": "^7.3.0",
-    "@prisma/client": "^7.3.0",
-    "dotenv": "^17.2.3",
-    "pg": "^8.18.0"
   }
 }
