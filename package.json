@@ -20,5 +20,8 @@
     "eslint-plugin-react": "^7.37.5",
     "globals": "^17.3.0",
     "typescript-eslint": "^8.54.0"
+  },
+  "overrides": {
+    "@eslint/core": "^0.17.0"
   }
 }
