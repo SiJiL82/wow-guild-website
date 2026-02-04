@@ -6,5 +6,9 @@
   ],
   "dependencies": {
     "dotenv": "^17.2.3"
+  },
+  "scripts": {
+    "db:migrate": "npm --workspace=@repo/database exec npx prisma migrate dev",
+    "db:generate": "npm --workspace=@repo/database exec npx prisma generate"
   }
 }
