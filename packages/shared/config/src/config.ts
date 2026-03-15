@@ -1,9 +1,14 @@
 import dotenv from "dotenv";
-import path from "node:path"
+import fs from "node:fs";
+import path from "node:path";
 
-dotenv.config({
-  path: path.resolve(process.cwd(), ".env"),
-});
+let dir = process.cwd();
+  while (!fs.existsSync(path.join(dir, ".env"))) {
+    const parent = path.dirname(dir);
+    if (parent === dir) break; // reached root
+    dir = parent;
+  }
+dotenv.config({ path: path.join(dir, ".env") });
 
 export class Config {
   requireEnv(name: string): string {
