@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx prisma dev --detach && tsx src/server.ts",
+    "start": "npx prisma generate && tsx src/server.ts",
     "build": "tsc -b",
     "serve": "node dist/index.js"
   },
