@@ -28,6 +28,12 @@ export class Config {
   readonly battlenet = {
     clientId: this.requireEnv("BATTLENET_API_CLIENT_ID"),
     clientSecret: this.requireEnv("BATTLENET_API_CLIENT_SECRET"),
+    region: this.requireEnv("BATTLENET_API_REGION"),
+  }
+
+  readonly guild = {
+    realm: this.requireEnv("GUILD_REALM"),
+    name: this.requireEnv("GUILD_NAME"),
   }
 }
 
