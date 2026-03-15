@@ -7,10 +7,10 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "target": "ES2023",
-    "types": [],
+    "types": ["node"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -46,7 +46,7 @@
 
     "baseUrl": ".",
     "paths": {
-      "@project/*": ["packages/shared/*"],
+      "@project/*": ["packages/shared/*/src", "packages/shared/*"],
       "@project/database": ["packages/database"],
     }
   }
