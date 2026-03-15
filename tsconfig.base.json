@@ -45,5 +45,9 @@
     "ignoreDeprecations": "5.0",
 
     "baseUrl": ".",
+    "paths": {
+      "@project/config": ["packages/shared/config/src"],
+      "@project/database": ["packages/database/src"]
+    }
   }
 }
