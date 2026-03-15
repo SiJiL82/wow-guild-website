@@ -2,14 +2,13 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/**"
   ],
-  "dependencies": {
-    "dotenv": "^17.2.3"
-  },
   "scripts": {
     "db:migrate": "npm --workspace=@repo/database exec npx prisma migrate dev",
-    "db:generate": "npm --workspace=@repo/database exec npx prisma generate"
+    "db:generate": "npm --workspace=@repo/database exec npx prisma generate",
+    "build": "npm run build --workspaces --if-present",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@eslint/css": "^0.14.1",
