@@ -6,5 +6,9 @@
     "composite": true,
     "types": ["node", "express"]
   },
+  "references": [
+    { "path": "../../packages/shared/config" },
+    { "path": "../../packages/database" },
+  ],
   "include": ["src"]
 }
