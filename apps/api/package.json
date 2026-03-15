@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx prisma dev --detach && ts-node src/server.ts",
+    "start": "npx prisma dev --detach && tsx src/server.ts",
     "build": "tsc",
     "serve": "node dist/index.js"
   },
@@ -18,8 +18,6 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }
